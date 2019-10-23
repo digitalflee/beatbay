@@ -1,0 +1,16 @@
+<h1><%= @contract.beat.name %></h1>
+<h1> Beat Lease Details </h1>
+
+<ol>
+<h2>Artist Name: <%= @contract.artist.name %></h2>
+<br>
+<ol>
+<h2> Price: $<%= @contract.beat.price %> </h2>
+</ol>
+</ol>
+
+<h3> Cancel Lease Below </h3>
+<%= button_to "Delete Contract", { :action => "destroy", :id => @contract.id },
+          :confirm => "Are you sure?", :method => :delete %>
+
+

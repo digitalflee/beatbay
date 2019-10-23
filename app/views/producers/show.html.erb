@@ -1,0 +1,9 @@
+<h1><%= @producer.name %></h1>
+<br>
+<h2> BEATS </h2>
+<% @producer.beats.each do |beat| %>
+<ol>
+<%= link_to beat.name, beat_path %>
+</ol>
+<% end %>
+

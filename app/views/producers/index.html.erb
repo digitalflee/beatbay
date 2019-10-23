@@ -1,0 +1,13 @@
+<h1> OUR PRODUCERS </h1>
+
+<% if current_user %>
+    <p>logged in </p>
+<% else %>
+    <p>not logged in </p>
+<% end %>
+
+<% @producers.each do |producer| %>
+<li>
+<%= link_to producer.name, producer %>
+<% end %>
+</li>

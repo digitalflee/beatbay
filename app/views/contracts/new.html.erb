@@ -1,0 +1,14 @@
+<h1> Contract </h1>
+<h3> Contract Details </h3>
+
+<%= form_for @contract do |f| %>
+
+<%= f.label :artist_id %>
+<%= f.collection_select :artist_id, Artist.all, :id, :name %>
+
+<%= f.label :beat_id %>
+<%= f.collection_select :beat_id, Beat.all, :id, :name %>
+
+
+<%= f.submit "I Agree on the terms"  %>
+<% end %>

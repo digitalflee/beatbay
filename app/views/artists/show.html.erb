@@ -1,0 +1,17 @@
+<h1><%= @artist.name %></h1>
+<ol>
+<h2> Beats You Own </h2>
+<% @artist.contracts.each do |contract| %>
+    <ol>
+    <br>
+    Beat : <%= contract.beat.name %>
+    <br>
+    Producer: <%= contract.beat.producer.name %>
+    </ol>
+    <br>
+    Contract: <%= link_to contract.beat.name, contract %> 
+    
+<% end %>
+</ol>
+<h4> <%= link_to "change info", edit_artist_path %>
+

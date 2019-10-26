@@ -5,6 +5,7 @@ class ContractsController < ApplicationController
     end 
 
     def create
+        # byebug
         @contract = Contract.create(contract_params)
         redirect_to contract_path(@contract) 
     end 

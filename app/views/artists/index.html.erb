@@ -1,8 +1,7 @@
-<h1> ARTISTS USING BEATBAY </h1>
 
+<h1 class="index"> ARTISTS USING BEATBAY </h1>
+<ul class="list-group">
 <% @artists.each do |artist| %>
-<li>
-<%= link_to artist.name, artist %>
-</li>
+    <li class="list-group-item"> <%= artist.name %> </li>
 <% end %>
-
+</ul

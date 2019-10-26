@@ -1,12 +1,12 @@
 
 require 'faker'
 
-p1 = Producer.create(name: "Metro Boomin")
-p2 = Producer.create(name: "Pierre Bourne")
-p3 = Producer.create(name: "Dr. Dre")
-p4 = Producer.create(name: "40 Noah")
-p5 = Producer.create(name: "Kanye West")
-p6 = Producer.create(name: "Pharrell")
+p1 = Producer.create(name: "Metro Boomin", img_url: "https://i.pinimg.com/originals/32/75/d6/3275d603fc9cb898b0da3431e0a0cabd.jpg")
+p2 = Producer.create(name: "Pierre Bourne", img_url: "https://townsquare.media/site/812/files/2017/04/pierre-bourne.jpg?w=980&q=75")
+p3 = Producer.create(name: "Dr. Dre", img_url: "https://i.ytimg.com/vi/Z7of44J7ARc/maxresdefault.jpg")
+p4 = Producer.create(name: "40 Noah", img_url: "https://i.ytimg.com/vi/cl23qnQQ3J0/maxresdefault.jpg")
+p5 = Producer.create(name: "Kanye West", img_url: "https://centralsauce.com/wp-content/uploads/2018/04/kanyestudio.png")
+p6 = Producer.create(name: "Pharrell", img_url: "https://creativetechlab.com/wp-content/uploads/2016/08/pharell-in-studio.jpg")
 
 
 20.times do 

@@ -1,9 +1,11 @@
-<h1><%= @producer.name %></h1>
+<h1 class="index"><%= @producer.name %></h1>
+<%= image_tag @producer.img_url %>
 <br>
 <h2> BEATS </h2>
 <% @producer.beats.each do |beat| %>
-<ol>
-<%= link_to beat.name, beat_path %>
-</ol>
+<ul class="list-group">
+<li class="list-group-item"><%= link_to beat.name, beat %></li>
 <% end %>
+</ul>
+
 

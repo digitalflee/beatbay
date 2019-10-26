@@ -1,17 +1,17 @@
-<h1><%= @artist.name %></h1>
+<h1 class="index"><%= @artist.name %></h1>
 <ol>
 <h2> Beats You Own </h2>
 <% @artist.contracts.each do |contract| %>
-    <ol>
-    <br>
-    Beat : <%= contract.beat.name %>
-    <br>
-    Producer: <%= contract.beat.producer.name %>
-    </ol>
-    <br>
-    Contract: <%= link_to contract.beat.name, contract %> 
+   <ul class="list-group">
+    Beat : <li class="list-group-item"><%= contract.beat.name %></li>
+   
+    Producer: <li class="list-group-item"><%= contract.beat.producer.name %></li>
+    
+    Contract: <li class="list-group-item"><%= link_to contract.beat.name, contract %> </li>
     
 <% end %>
-</ol>
+</ul>
+
 <h4> <%= link_to "change info", edit_artist_path %>
+
 

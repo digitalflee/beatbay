@@ -1,14 +1,45 @@
-<h1> Contract </h1>
-<h3> Contract Details </h3>
+
+<div class="card text-center" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Beat Lease Contract</h5>
+    <p class="card-text"> 
+Description:
+The beat chosen is to be leased for non-exclusive lease; (for a 2 year lease). This fee is solely for
+use, and is separate from royalties. The amount allows you to license this beat to make a song of your choice and publicly
+display/sell for commercial use at your own discretion, while others can also contract to do the same. Every 2 years, a
+new agreement for lease of beat can be negotiated.
+
+Royalties:
+The producer is entitled to 50% of money from song writing and
+50% of money from publishing of the finished song.
+
+Vocals & Beat/Instrumental:
+The artist is entitled to do what they please with the vocals from the song with no obligation to the producer
+(remixes, acapellas, etc.)
+The producer is entitled to use the beat/instrumental at their own discretion, including leasing it to other artists.
+Producer can use the beat for movies, video games, TV, shows, songs, etc.
+Non-Exclusive Lease:
+his is a non-exclusive lease (to the person signing the contract) that lasts 2 years and can be renegotiated after
+every term. Multiple artists can lease this beat alongside your contract.
+Requirements:
+The producer credit must always be displayed in all written information regarding the song(s). It's each party's
+responsibility to notify one another of any contact information changes within 6 months.  </p>
+  </div>
+</div>
+
 
 <%= form_for @contract do |f| %>
 
-<%= f.label :artist_id %>
-<%= f.collection_select :artist_id, Artist.all, :id, :name %>
+<%= f.hidden_field :artist_id, value: current_user.id %>
+
 
 <%= f.label :beat_id %>
 <%= f.collection_select :beat_id, Beat.all, :id, :name %>
 
-
 <%= f.submit "I Agree on the terms"  %>
 <% end %>
+
+
+
+
+

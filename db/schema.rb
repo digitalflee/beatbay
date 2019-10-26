@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2019_10_21_221109) do
 
   create_table "producers", force: :cascade do |t|
     t.string "name"
+    t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

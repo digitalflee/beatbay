@@ -1,13 +1,22 @@
-<h1> OUR PRODUCERS </h1>
+<div class="index-video-wrapper">
+  <%= video_tag "blaatina.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "index_video" %>
 
-<% if current_user %>
-    <p>logged in </p>
-<% else %>
-    <p>not logged in </p>
-<% end %>
 
+<ul>
+
+</ul>
+</div>
+
+<h1 class="index"> Producers </h1>
+<ul class="list-group">
 <% @producers.each do |producer| %>
-<li>
-<%= link_to producer.name, producer %>
+    <li class="list-group-item"> <%= link_to producer.name, producer %> </li>
 <% end %>
-</li>
+</ul
+
+
+
+
+
+
+
